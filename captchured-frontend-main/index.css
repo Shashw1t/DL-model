@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #003399;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container .logo img {
+    width: 50px;
+}
+
+.header-container .logo2 img {
+    height: 70px;
+}
+
+header .title {
+    text-align: center;
+}
+
+.main-section {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    flex: 1;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.form-container {
+    flex: 2;
+    padding-left: 20px;
+    background-color: white;
+}
+
+.form-container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-container form input[type="text"],
+.form-container form input[type="date"],
+.form-container form input[type="time"] {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.form-container form .radio-group {
+    margin-bottom: 15px;
+}
+
+.form-container form .radio-group label {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #003399;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #002266;
+}
+
+.footer {
+    justify-content: end;
+    text-align: center;
+    padding: 20px;
+    background-color: #003399;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+.slideContainer{
+    width: 100%;
+    margin-top: 50px;
+    justify-items: center;
+    align-items: center;
+}
+.slider{
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    justify-content: center;
+}

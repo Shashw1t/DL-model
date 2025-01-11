@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Aadhaar Status</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="india-logo.png" alt="Indian Government Logo">
+            </div>
+            <div class="title">
+                <h1>Unique Identification Authority of India</h1>
+            </div>
+            <div class="logo2">
+                <img src="aadharlogo.svg" alt="Indian Government Logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="main-section">
+        <div class="sidebar">
+            <h2>Frequently Asked Questions</h2>
+            <ul>
+                <li>What details can I update through Update Aadhaar online Service?</li>
+                <li>Is there any fee involved for Online updation of Demographics details?</li>
+                <li>How many times Aadhaar data can be updated?</li>
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <h2>Check Aadhaar Status</h2>
+            <p>Check if your Aadhaar is generated or updated...</p>
+
+            <form action="javascript:submit()">
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="id_type" value="EID" checked> Enrolment ID
+                    </label>
+                    <label>
+                        <input type="radio" name="id_type" value="SRN"> SRN
+                    </label>
+                    <label>
+                        <input type="radio" name="id_type" value="URN"> URN
+                    </label>
+                </div>
+
+                <label for="enrolment-id">Enter 14 digit Enrolment Number</label>
+                <input type="text" id="enrolment-id" name="enrolment-id" placeholder="Enter Enrolment Number">
+
+                <label for="eid-date">Select EID date</label>
+                <input type="date" id="eid-date" name="eid-date">
+
+                <label for="eid-time">Select EID time</label>
+                <input type="time" id="eid-time" name="eid-time">
+
+                <button type="submit">Submit</button>
+            </form>
+            <div class="slideContainer">
+                <p>Please drag the slider to the number: </p>
+                <input type="range" min="1" max="100" value="1" id="myRange" class="slider">
+                <p>Value: <span id="value"></span></p>
+            </div>
+        </div>
+    </section>
+    <span>
+        <section class="footer">
+            <p>&copy; 2024 Unique Identification Authority of India</p>
+        </section>
+    </span>
+    <script src="index.js"></script>
+</body>
+</html>
