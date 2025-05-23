@@ -13,7 +13,7 @@
     "captcha",
     "api"
   ],
-  "author": "Anikate De",
+  "author": "Shashwat Dwivedi",
   "license": "MIT",
   "dependencies": {
     "captchured-ml": "file:",

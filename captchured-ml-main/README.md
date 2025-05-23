@@ -24,7 +24,7 @@ Integrate the frontend script into your website to collect user behavior and POS
 POST /capture
 ```
 
-- **URL:** `http://localhost:3000/capture`
+- **URL:** `https://your-app.onrender.com/capture`
 - **Method:** `POST`
 - **Content-Type:** `application/json`
 
@@ -87,6 +87,33 @@ Returns a JSON object:
 
 When ML model integration is ready, the response will include a prediction result.
 
+### Example Usage (with fetch in frontend)
+
+```js
+fetch('https://your-app.onrender.com/capture', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    key_count: 3,
+    key_sequence: ['a', 'b', 'c'],
+    time_delay: [100, 120],
+    mouse_movements: [],
+    mouse_clicks: [],
+    total_time: 1500,
+    environment: {
+      timezone: 'Asia/Kolkata',
+      language: 'en-US',
+      cpu: 8,
+      browser: 'Mozilla/5.0',
+      os: 'Windows',
+      deviceType: 'Desktop'
+    }
+  })
+})
+  .then(res => res.json())
+  .then(data => console.log(data));
+```
+
 ## Frontend Integration Example
 
 To use the API from your own frontend, send a POST request to the `/capture` endpoint with the required data.  
@@ -95,7 +122,7 @@ You can use `fetch`, `axios`, or any HTTP client in your frontend code.
 ### Example using fetch
 
 ```js
-fetch('http://localhost:3000/capture', {
+fetch('https://your-app.onrender.com/capture', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -134,7 +161,7 @@ fetch('http://localhost:3000/capture', {
 
 1. Collect user behavior data in your frontend (keypresses, mouse movements, etc.).
 2. Format the data as shown above.
-3. Send a POST request to `http://localhost:3000/capture` (or your deployed API endpoint).
+3. Send a POST request to `https://your-app.onrender.com/capture` (or your deployed API endpoint).
 4. Handle the response in your frontend (e.g., display prediction to the user).
 
 ## License
