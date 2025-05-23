@@ -1,15 +1,21 @@
 {
   "name": "captchured-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Plug-and-play bot/human prediction API for websites using behavioral data.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "bot-detection",
+    "human-detection",
+    "ml",
+    "captcha",
+    "api"
+  ],
+  "author": "Anikate De",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.7.7",
     "captchured-api": "file:",
