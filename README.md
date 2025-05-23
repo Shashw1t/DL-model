@@ -1,6 +1,6 @@
 # captchured-ml
 
-## Installation
+## Installation (published as a npm package)
 
 ```bash
 npm install captchured-api
