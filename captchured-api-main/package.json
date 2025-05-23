@@ -14,7 +14,7 @@
     "captcha",
     "api"
   ],
-  "author": "Anikate De",
+  "author": "Shashwat Dwivedi",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.7",
