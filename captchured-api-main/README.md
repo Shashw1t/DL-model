@@ -3,28 +3,55 @@
 ## Installation
 
 ```bash
-npm install captchured-ml
+npm install captchured-api
 ```
 
 ## Usage
 
-Start the API server:
+### 1. Use the Hosted API
 
-```bash
-npm start
+You can send requests directly to the hosted API:
+
+```
+POST https://captchured.shashw1t.in/
 ```
 
-Integrate the frontend script into your website to collect user behavior and POST to `/capture`.
+See the [API Documentation](#api-documentation) below for request/response format.
+
+---
+
+### 2. Self-host the API
+
+You can run your own instance:
+
+```js
+const createApp = require('captchured-api');
+const app = createApp();
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
+```
+
+Or, from the command line:
+
+```bash
+npx captchured-api
+# or if installed globally
+captchured-api
+```
+
+---
 
 ## API Documentation
 
 ### Endpoint
 
 ```
-POST /capture
+POST /
 ```
 
-- **URL:** `https://dl-model-1.onrender.com/capture`
+- **URL:** `https://captchured.shashw1t.in/`
 - **Method:** `POST`
 - **Content-Type:** `application/json`
 
@@ -90,7 +117,7 @@ When ML model integration is ready, the response will include a prediction resul
 ### Example Usage (with fetch in frontend)
 
 ```js
-fetch('https://dl-model-1.onrender.com/capture', {
+fetch('https://captchured.shashw1t.in/', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -116,13 +143,13 @@ fetch('https://dl-model-1.onrender.com/capture', {
 
 ## Frontend Integration Example
 
-To use the API from your own frontend, send a POST request to the `/capture` endpoint with the required data.  
+To use the API from your own frontend, send a POST request to the `/` endpoint with the required data.  
 You can use `fetch`, `axios`, or any HTTP client in your frontend code.
 
 ### Example using fetch
 
 ```js
-fetch('https://dl-model-1.onrender.com/capture', {
+fetch('https://captchured.shashw1t.in/', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -161,8 +188,10 @@ fetch('https://dl-model-1.onrender.com/capture', {
 
 1. Collect user behavior data in your frontend (keypresses, mouse movements, etc.).
 2. Format the data as shown above.
-3. Send a POST request to `https://dl-model-1.onrender.com/capture`.
+3. Send a POST request to `https://captchured.shashw1t.in/`.
 4. Handle the response in your frontend (e.g., display prediction to the user).
+
+---
 
 ## License
 
