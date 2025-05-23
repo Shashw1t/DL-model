@@ -1,7 +1,7 @@
 {
   "name": "captchured-api",
   "version": "1.0.0",
-  "description": "Plug-and-play bot/human prediction API for websites using behavioral data.",
+  "description": "Plug-and-play bot/human prediction API for websites using behavioral data. (cloudfare/google-v3 competitor)",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
